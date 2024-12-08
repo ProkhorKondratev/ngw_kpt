@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Конвертация XML выписок</title>
+    </head>
+
+    <body>
+        <div class="kpt-container">
+            <div class="kpt-stats">
+                <div class="kpt-stats__items">
+                    <div class="kpt-badge info">
+                        <p>Загружено:</p>
+                        <span>0</span>
+                    </div>
+                    <div class="kpt-badge warning">
+                        <p>В обработке:</p>
+                        <span>0</span>
+                    </div>
+                    <div class="kpt-badge success">
+                        <p>Обработаны:</p>
+                        <span>0</span>
+                    </div>
+                    <div class="kpt-badge danger">
+                        <p>С ошибкой:</p>
+                        <span>0</span>
+                    </div>
+                    <div class="kpt-badge primary">
+                        <p>Осталось:</p>
+                        <span>0</span>
+                    </div>
+                </div>
+                <div class="kpt-stats__buttons">
+                    <button style="display: none"></button>
+                    <button>Загрузить файлы</button>
+                </div>
+            </div>
+            <div class="kpt-table">
+                <div class="kpt-table-header">
+                    <h5>Пакетная конвертация XML выписок ЕГРН (КПТ, КВЗУ, ОКС и др.) в наборы геоданных</h5>
+                    <div class="kpt-table-header__actions">
+                        <a>Участки</a>
+                        <label class="switch">
+                            <input id="table-switcher" type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                        <a>Группы</a>
+                    </div>
+                </div>
+                <div class="kpt-table-body"></div>
+            </div> 
+        </div>
+        <div class="alert-wrapper"></div>
+    </body>
+</html>

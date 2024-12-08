@@ -1,0 +1,67 @@
+.ms-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    transition: opacity 0.5s, visibility 0.5s;
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .ms-modal-content {
+        background-color: white;
+        border-radius: 5px;
+        padding: 20px;
+        width: 100%;
+        min-width: 800px;
+        max-width: 1000px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transform: scale(0.5);
+        max-height: 0;
+        overflow: hidden;
+        transition: transform 0.5s, max-height 0.5s;
+
+        &.show {
+            transform: scale(1);
+        }
+
+        .ms-modal__header {
+            display: flex;
+            color: #101244;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+
+            button {
+                background: none;
+                border: none;
+                font-size: 1.5rem;
+                cursor: pointer;
+
+                p {
+                    margin: 0;
+                    font-weight: bold;
+                }
+            }
+
+            span {
+                font-size: 1.5rem;
+            }
+        }
+
+        .ms-modal-body {
+            width: 100%;
+        }
+    }
+}

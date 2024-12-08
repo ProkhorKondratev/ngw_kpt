@@ -1,0 +1,21 @@
+name: nextgis-kpt
+services:
+  frontend:
+    image: ngw_kpt-front:1.0.0
+    ports:
+      - "${WEB_PORT}:80"
+    depends_on:
+      - backend
+    env_file:
+      - .env
+
+  backend:
+    image: ngw_kpt-back:1.0.0
+    volumes:
+      - ./data/uploaded:/usr/src/app/data/uploaded
+      - ./data/results:/usr/src/app/data/results
+      - ./data/database:/usr/src/app/data/database
+      - ./data/logs:/usr/src/app/data/logs
+      - ./data/tmp:/usr/src/app/data/tmp
+    env_file:
+      - .env
