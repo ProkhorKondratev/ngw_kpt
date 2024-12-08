@@ -21,7 +21,7 @@
 ## Установка
 1. Клонируйте репозиторий и перейдите в каталог проекта:
     ```bash
-    git clone https://git.lan/KondratevProkhor/ngw_kpt.git
+    git clone https://github.com/ProkhorKondratev/ngw_kpt.git
     cd ngw_kpt
     ```
 
